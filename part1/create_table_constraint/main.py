@@ -10,12 +10,12 @@ import prettytable
 with sqlite3.connect(":memory:") as con:
     cur = con.cursor()
     sqlite_query = """CREATE TABLE animals
-                        (id integer primary key autoincrement,
-                        AnimalType nvarchar(20),
-                        Sex nvarchar(20), 
-                        name nvarchar(20) constraint name_1 default 'Noname',
+                        (Id integer primary key autoincrement,
+                        AnimalType varchar(20),
+                        Sex varchar(20), 
+                        Name varchar(20) constraint name_1 default 'Noname',
                         DateOfBirth date,
-                        Age float,
+                        Age integer ,
                         Weight decimal) """
     cur.execute(sqlite_query)
 # Не удаляйте этот код, он используется
