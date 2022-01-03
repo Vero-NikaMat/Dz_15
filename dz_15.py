@@ -19,7 +19,7 @@ def animals(idx):
     cur = con.cursor()
     sqlite_query = f"""
                 select * from animals_fin 
-                left join outcomes on outcomes.outcome_id = animals_fin.animal_id
+                left join outcomes on outcomes.outcome_id = animals_fin.id
                 where animals_fin.id={idx}
     """
 
